@@ -1,4 +1,15 @@
 import streamlit as st
+
+st.set_page_config(
+    page_icon="😊",
+    page_title="내가 만든 사이트",
+    layout="wide",
+)
+
+st.subheader("코드보기")
+
+if st.button("home.py 코드 보기"):
+    code = '''import streamlit as st
 import pandas as pd
 import numpy as np
 
@@ -100,3 +111,6 @@ elif mbti == 'ESTJ':
     st.write('한번 결심하면 끝까지 해내서 결국 다이어트 성공하는 유형')
 else:
     st.write("자신의 MBTI를 알려주세요.")
+
+    '''
+    st.code(code,language="python")
